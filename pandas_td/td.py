@@ -316,7 +316,7 @@ class ResultProxy(object):
             return ""
 
     def __iter__(self):
-        for record in msgpack.Unpacker(self, encoding="utf-8"):
+        for record in msgpack.Unpacker(self):
             yield record
 
     def _parse_dates(self, frame, parse_dates):
